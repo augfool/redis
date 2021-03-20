@@ -1,0 +1,95 @@
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  "C"
+  )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_C
+  "/Users/kong/apache/redis/src/adlist.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/adlist.c.o"
+  "/Users/kong/apache/redis/src/ae.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/ae.c.o"
+  "/Users/kong/apache/redis/src/anet.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/anet.c.o"
+  "/Users/kong/apache/redis/src/aof.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/aof.c.o"
+  "/Users/kong/apache/redis/src/bio.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/bio.c.o"
+  "/Users/kong/apache/redis/src/bitops.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/bitops.c.o"
+  "/Users/kong/apache/redis/src/blocked.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/blocked.c.o"
+  "/Users/kong/apache/redis/src/childinfo.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/childinfo.c.o"
+  "/Users/kong/apache/redis/src/cluster.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/cluster.c.o"
+  "/Users/kong/apache/redis/src/config.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/config.c.o"
+  "/Users/kong/apache/redis/src/crc16.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/crc16.c.o"
+  "/Users/kong/apache/redis/src/crc64.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/crc64.c.o"
+  "/Users/kong/apache/redis/src/db.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/db.c.o"
+  "/Users/kong/apache/redis/src/debug.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/debug.c.o"
+  "/Users/kong/apache/redis/src/defrag.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/defrag.c.o"
+  "/Users/kong/apache/redis/src/dict.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/dict.c.o"
+  "/Users/kong/apache/redis/src/endianconv.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/endianconv.c.o"
+  "/Users/kong/apache/redis/src/evict.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/evict.c.o"
+  "/Users/kong/apache/redis/src/expire.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/expire.c.o"
+  "/Users/kong/apache/redis/src/geo.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/geo.c.o"
+  "/Users/kong/apache/redis/src/geohash.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/geohash.c.o"
+  "/Users/kong/apache/redis/src/geohash_helper.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/geohash_helper.c.o"
+  "/Users/kong/apache/redis/src/hyperloglog.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/hyperloglog.c.o"
+  "/Users/kong/apache/redis/src/intset.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/intset.c.o"
+  "/Users/kong/apache/redis/src/latency.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/latency.c.o"
+  "/Users/kong/apache/redis/src/lazyfree.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/lazyfree.c.o"
+  "/Users/kong/apache/redis/src/listpack.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/listpack.c.o"
+  "/Users/kong/apache/redis/src/localtime.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/localtime.c.o"
+  "/Users/kong/apache/redis/src/lolwut.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/lolwut.c.o"
+  "/Users/kong/apache/redis/src/lolwut5.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/lolwut5.c.o"
+  "/Users/kong/apache/redis/src/lzf_c.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/lzf_c.c.o"
+  "/Users/kong/apache/redis/src/lzf_d.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/lzf_d.c.o"
+  "/Users/kong/apache/redis/src/memtest.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/memtest.c.o"
+  "/Users/kong/apache/redis/src/module.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/module.c.o"
+  "/Users/kong/apache/redis/src/multi.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/multi.c.o"
+  "/Users/kong/apache/redis/src/networking.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/networking.c.o"
+  "/Users/kong/apache/redis/src/notify.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/notify.c.o"
+  "/Users/kong/apache/redis/src/object.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/object.c.o"
+  "/Users/kong/apache/redis/src/pqsort.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/pqsort.c.o"
+  "/Users/kong/apache/redis/src/pubsub.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/pubsub.c.o"
+  "/Users/kong/apache/redis/src/quicklist.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/quicklist.c.o"
+  "/Users/kong/apache/redis/src/rand.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/rand.c.o"
+  "/Users/kong/apache/redis/src/rax.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/rax.c.o"
+  "/Users/kong/apache/redis/src/rdb.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/rdb.c.o"
+  "/Users/kong/apache/redis/src/redis-check-aof.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/redis-check-aof.c.o"
+  "/Users/kong/apache/redis/src/redis-check-rdb.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/redis-check-rdb.c.o"
+  "/Users/kong/apache/redis/src/release.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/release.c.o"
+  "/Users/kong/apache/redis/src/replication.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/replication.c.o"
+  "/Users/kong/apache/redis/src/rio.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/rio.c.o"
+  "/Users/kong/apache/redis/src/scripting.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/scripting.c.o"
+  "/Users/kong/apache/redis/src/sds.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/sds.c.o"
+  "/Users/kong/apache/redis/src/sentinel.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/sentinel.c.o"
+  "/Users/kong/apache/redis/src/server.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/server.c.o"
+  "/Users/kong/apache/redis/src/setproctitle.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/setproctitle.c.o"
+  "/Users/kong/apache/redis/src/sha1.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/sha1.c.o"
+  "/Users/kong/apache/redis/src/siphash.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/siphash.c.o"
+  "/Users/kong/apache/redis/src/slowlog.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/slowlog.c.o"
+  "/Users/kong/apache/redis/src/sort.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/sort.c.o"
+  "/Users/kong/apache/redis/src/sparkline.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/sparkline.c.o"
+  "/Users/kong/apache/redis/src/syncio.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/syncio.c.o"
+  "/Users/kong/apache/redis/src/t_hash.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/t_hash.c.o"
+  "/Users/kong/apache/redis/src/t_list.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/t_list.c.o"
+  "/Users/kong/apache/redis/src/t_set.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/t_set.c.o"
+  "/Users/kong/apache/redis/src/t_stream.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/t_stream.c.o"
+  "/Users/kong/apache/redis/src/t_string.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/t_string.c.o"
+  "/Users/kong/apache/redis/src/t_zset.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/t_zset.c.o"
+  "/Users/kong/apache/redis/src/util.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/util.c.o"
+  "/Users/kong/apache/redis/src/ziplist.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/ziplist.c.o"
+  "/Users/kong/apache/redis/src/zipmap.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/zipmap.c.o"
+  "/Users/kong/apache/redis/src/zmalloc.c" "/Users/kong/apache/redis/CMakeFiles/redis-server.dir/src/zmalloc.c.o"
+  )
+set(CMAKE_C_COMPILER_ID "AppleClang")
+
+# The include file search paths:
+set(CMAKE_C_TARGET_INCLUDE_PATH
+  "deps/linenoise"
+  "deps/hiredis"
+  "deps/lua/src"
+  )
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/Users/kong/apache/redis/deps/lua/CMakeFiles/lua.dir/DependInfo.cmake"
+  "/Users/kong/apache/redis/deps/linenoise/CMakeFiles/linenoise.dir/DependInfo.cmake"
+  "/Users/kong/apache/redis/deps/hiredis/CMakeFiles/hiredis.dir/DependInfo.cmake"
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")
