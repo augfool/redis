@@ -132,7 +132,7 @@ void aeDeleteEventLoop(aeEventLoop *eventLoop) {
 void aeStop(aeEventLoop *eventLoop) {
     eventLoop->stop = 1;
 }
-
+/* 将fd添加到eventLoop中 */
 int aeCreateFileEvent(aeEventLoop *eventLoop, int fd, int mask,
         aeFileProc *proc, void *clientData)
 {
@@ -359,7 +359,7 @@ int aeProcessEvents(aeEventLoop *eventLoop, int flags)
 {
     int processed = 0, numevents;
 
-    /* Nothing to do? return ASAP */
+    /* Nothing to do? return ASAP，flags 不是时间或者文件事件时，退出程序，起到对 flags 校验的作用 */
     if (!(flags & AE_TIME_EVENTS) && !(flags & AE_FILE_EVENTS)) return 0;
 
     /* Note that we want call select() even if there are no
@@ -370,11 +370,11 @@ int aeProcessEvents(aeEventLoop *eventLoop, int flags)
         ((flags & AE_TIME_EVENTS) && !(flags & AE_DONT_WAIT))) {
         int j;
         aeTimeEvent *shortest = NULL;
-        struct timeval tv, *tvp;
-
+        struct timeval tv, *tvp;  /* 计算 I/O 多路复用的等待时间 tvp */
+        /* 处理时间 */
         if (flags & AE_TIME_EVENTS && !(flags & AE_DONT_WAIT))
             shortest = aeSearchNearestTimer(eventLoop);
-        if (shortest) {
+        if (shortest) { /* 取出的目的是为了给epoll设置最大超时时间，以免epoll一直阻塞在哪里 */
             long now_sec, now_ms;
 
             aeGetTime(&now_sec, &now_ms);
@@ -407,13 +407,13 @@ int aeProcessEvents(aeEventLoop *eventLoop, int flags)
         }
 
         /* Call the multiplexing API, will return only on timeout or when
-         * some event fires. */
+         * some event fires. 返回超时或者触发事件 */
         numevents = aeApiPoll(eventLoop, tvp);
 
-        /* After sleep callback. */
+        /* After sleep callback. sleep 后会调 */
         if (eventLoop->aftersleep != NULL && flags & AE_CALL_AFTER_SLEEP)
             eventLoop->aftersleep(eventLoop);
-
+        /* 分别处理每个事件 */
         for (j = 0; j < numevents; j++) {
             aeFileEvent *fe = &eventLoop->events[eventLoop->fired[j].fd];
             int mask = eventLoop->fired[j].mask;

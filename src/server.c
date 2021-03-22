@@ -2071,7 +2071,7 @@ void initServer(void) {
 
     /* Open the TCP listening socket for the user commands. */
     if (server.port != 0 &&
-        listenToPort(server.port,server.ipfd,&server.ipfd_count) == C_ERR)
+        listenToPort(server.port,server.ipfd,&server.ipfd_count) == C_ERR) /* 设置了server.ipfd_count值 */
         exit(1);
 
     /* Open the listening Unix domain socket. */
@@ -2441,7 +2441,7 @@ void preventCommandReplication(client *c) {
  * preventCommandPropagation(client *c);
  * preventCommandAOF(client *c);
  * preventCommandReplication(client *c);
- *
+ * call() 函数是执行命令的核心函数，真正执行命令的地方
  */
 void call(client *c, int flags) {
     long long dirty;
@@ -2470,7 +2470,7 @@ void call(client *c, int flags) {
     dirty = server.dirty;
     updateCachedTime(0);
     start = server.ustime;
-    c->cmd->proc(c);
+    c->cmd->proc(c); /* 执行命令对应的处理函数 */
     duration = ustime()-start;
     dirty = server.dirty-dirty;
     if (dirty < 0) dirty = 0;

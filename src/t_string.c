@@ -83,13 +83,13 @@ void setGenericCommand(client *c, int flags, robj *key, robj *val, robj *expire,
         addReply(c, abort_reply ? abort_reply : shared.nullbulk);
         return;
     }
-    setKey(c->db,key,val);
+    setKey(c->db,key,val); /* 存数据 */
     server.dirty++;
     if (expire) setExpire(c,c->db,key,mstime()+milliseconds);
     notifyKeyspaceEvent(NOTIFY_STRING,"set",key,c->db->id);
     if (expire) notifyKeyspaceEvent(NOTIFY_GENERIC,
         "expire",key,c->db->id);
-    addReply(c, ok_reply ? ok_reply : shared.ok);
+    addReply(c, ok_reply ? ok_reply : shared.ok); /* 会为与客户端连接的套接字注册可写事件，把’ok’ 添加到客户端的回复缓存中 */
 }
 
 /* SET key value [NX] [XX] [EX <seconds>] [PX <milliseconds>] */

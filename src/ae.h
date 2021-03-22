@@ -89,7 +89,7 @@ typedef struct aeTimeEvent {
 
 /* A fired event */
 typedef struct aeFiredEvent {
-    int fd;
+    int fd; /* 文件描述符 */
     int mask;
 } aeFiredEvent;
 

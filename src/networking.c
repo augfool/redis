@@ -1510,7 +1510,7 @@ void processInputBufferAndReplicate(client *c) {
         }
     }
 }
-
+/* 获取来自客户端的数据 */
 void readQueryFromClient(aeEventLoop *el, int fd, void *privdata, int mask) {
     client *c = (client*) privdata;
     int nread, readlen;
