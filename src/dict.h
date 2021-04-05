@@ -45,15 +45,15 @@
 #define DICT_NOTUSED(V) ((void) V)
 
 typedef struct dictEntry {
-    void *key;
+    void *key; /* 64位系统，指针占8字节 */
     union {
         void *val;
-        uint64_t u64;
+        uint64_t u64; /* 8字节 */
         int64_t s64;
         double d;
-    } v;
+    } v;                 /* 共用体 去最大的成员占用内存大小 */
     struct dictEntry *next;
-} dictEntry;
+} dictEntry; /* 所有dictEntry一种占用24字节 */
 
 typedef struct dictType {
     uint64_t (*hashFunction)(const void *key);

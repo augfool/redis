@@ -613,7 +613,7 @@ typedef struct RedisModuleDigest {
 
 #define OBJ_SHARED_REFCOUNT INT_MAX
 typedef struct redisObject {
-    unsigned type:4;
+    unsigned type:4;       /* : 位域类型，占4bits */
     unsigned encoding:4;
     unsigned lru:LRU_BITS; /* LRU time (relative to global lru_clock) or
                             * LFU data (least significant 8 bits frequency
